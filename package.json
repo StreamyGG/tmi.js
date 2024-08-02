@@ -1,5 +1,5 @@
 {
-  "name": "tmi.js",
+  "name": "@streamygg/tmi.js",
   "version": "2.0.0",
   "description": "",
   "type": "module",
@@ -14,10 +14,13 @@
       "default": "./dist/tmi.node.cjs"
     }
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --trace-warnings --loader tsx/esm src/test.ts",
-    "build": "rm -rf dist/* && node scripts/esbuild.js && tsc"
+    "build": "node scripts/esbuild.js && tsc"
   },
   "files": [
     "dist"

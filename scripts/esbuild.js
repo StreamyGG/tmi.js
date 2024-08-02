@@ -1,9 +1,12 @@
 // @ts-check
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
+const pkg = require('../package.json');
+const esbuildPkg = require('esbuild/package.json');
 
 import { build } from 'esbuild';
 import { replace } from 'esbuild-plugin-replace';
-import pkg from '../package.json' with { type: 'json' };
-import esbuildPkg from 'esbuild/package.json' with { type: 'json' };
 import os from 'node:os';
 
 console.table([
